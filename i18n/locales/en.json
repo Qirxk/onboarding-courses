@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "eyebrow": "SELECTION FORM",
+    "title": "Computer Science Training",
+    "subtitle": "Answer honestly. Your responses are auto-saved at each step."
+  },
+  "language": {
+    "label": "Language",
+    "switch": "Change language"
+  },
+  "progress": {
+    "step": "Step"
+  },
+  "steps": {
+    "profile": "Personal Information",
+    "motivation": "Motivation",
+    "effort": "Effort & Discipline",
+    "reflection": "Reflection",
+    "engagement": "Commitment"
+  },
+  "actions": {
+    "previous": "Previous",
+    "next": "Continue",
+    "submit": "Submit my application",
+    "submitting": "Submitting..."
+  },
+  "feedback": {
+    "success": "Application sent successfully. Thank you!",
+    "required": "Please complete all required questions in this step.",
+    "hours": "Weekly hours must be greater than or equal to 1.",
+    "email": "Please enter a valid email address.",
+    "phone": "Please enter a valid phone number.",
+    "supabaseConfig": "Missing Supabase configuration. Add NUXT_PUBLIC_SUPABASE_URL and NUXT_PUBLIC_SUPABASE_ANON_KEY.",
+    "submitError": "Could not send data right now. Please check the Supabase table and RLS policies."
+  },
+  "admin": {
+    "loginEyebrow": "ADMIN AREA",
+    "loginTitle": "Administrator login",
+    "loginSubtitle": "Sign in with an administrator username or email, plus password from the Supabase admins table.",
+    "dashboardEyebrow": "DASHBOARD",
+    "dashboardTitle": "Saved applications",
+    "dashboardSubtitle": "Review, open, and delete submissions from a protected area.",
+    "detailEyebrow": "APPLICATION DETAILS",
+    "detailTitle": "Full information",
+    "identifierLabel": "Username or email",
+    "identifierPlaceholder": "Enter the username or email",
+    "passwordLabel": "Administrator password",
+    "passwordPlaceholder": "Enter the password",
+    "login": "Log in",
+    "loggingIn": "Logging in...",
+    "logout": "Log out",
+    "refresh": "Refresh",
+    "open": "Open",
+    "back": "Back to list",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "empty": "No applications yet.",
+    "submittedAt": "Submitted at",
+    "source": "Source",
+    "id": "Identifier",
+    "listError": "Could not load submissions.",
+    "detailError": "Could not load this submission.",
+    "identifierRequired": "Enter a username or email.",
+    "passwordRequired": "Enter the administrator password.",
+    "loginError": "Invalid password or unauthorized access.",
+    "deleteError": "Deletion failed.",
+    "deleteConfirm": "This action is irreversible. Do you really want to delete this submission?"
+  },
+  "questions": {
+    "fullName": {
+      "label": "Full name",
+      "placeholder": "Example: Aicha Ndiaye"
+    },
+    "email": {
+      "label": "Email address",
+      "placeholder": "Example: aicha[at]email.com"
+    },
+    "actualGrade": {
+      "label": "Current grade / class / diploma",
+      "placeholder": "Example: 12th grade, Bachelor's year 2, career switch..."
+    },
+    "phoneNumber": {
+      "label": "Phone number",
+      "placeholder": "Example: +221 77 123 45 67"
+    },
+    "whyProgramming": {
+      "label": "1. Why do you want to learn programming? (3-5 lines)",
+      "placeholder": "Explain your motivation in a few lines..."
+    },
+    "whatBuild": {
+      "label": "2. What do you want to build after this training?",
+      "placeholder": "Example: an app to support local associations..."
+    },
+    "techTried": {
+      "label": "3. What have you already tried learning in tech?",
+      "placeholder": "Courses, tutorials, projects, self-learning..."
+    },
+    "hoursPerWeek": {
+      "label": "4. How many hours per week can you dedicate to this training?",
+      "placeholder": "Example: 8"
+    },
+    "difficultThing": {
+      "label": "5. Give an example of something difficult you managed to finish.",
+      "placeholder": "Share context, obstacles, and result..."
+    },
+    "biggestNumberMethod": {
+      "label": "6. How would you find the largest number in a list? (without code)",
+      "placeholder": "Describe your method clearly..."
+    },
+    "teaSteps": {
+      "label": "7. Explain how to prepare tea step by step.",
+      "placeholder": "List the steps in order..."
+    },
+    "firstWhenBroken": {
+      "label": "8. If something does not work, what do you do first?",
+      "placeholder": "What is your first troubleshooting action?"
+    },
+    "whatCouldStop": {
+      "label": "9. What could make you stop this training?",
+      "placeholder": "Be transparent about possible blockers..."
+    },
+    "whyChooseYou": {
+      "label": "10. Why should we choose you over others?",
+      "placeholder": "Highlight your motivation and commitment..."
+    }
+  }
+}

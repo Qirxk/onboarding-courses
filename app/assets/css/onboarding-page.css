@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+.page {
+  --brand-ink: #1a120f;
+  --brand-primary: #ef4423;
+  --brand-primary-strong: #d93616;
+  --brand-accent: #ff8a1f;
+  --brand-purple: #6a35ff;
+  --brand-purple-soft: #efe8ff;
+  --brand-soft: #fff2e9;
+  --surface: #fffaf6;
+  --surface-raised: #ffffff;
+  --border-soft: #f4b298;
+  --text-muted: #5e463f;
+
+  min-height: 100vh;
+  padding: 2rem 1.1rem 3.2rem;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(239, 68, 35, 0.16) 0, transparent 35%),
+    radial-gradient(circle at 22% 88%, rgba(106, 53, 255, 0.14) 0, transparent 35%),
+    radial-gradient(circle at 92% 90%, rgba(255, 138, 31, 0.2) 0, transparent 38%),
+    linear-gradient(145deg, #fff5ef 0%, #fff9f4 52%, #fff4e7 100%);
+  color: var(--brand-ink);
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.hero {
+  max-width: 840px;
+  margin: 0 auto 1.4rem;
+}
+
+.hero__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero__copy {
+  max-width: 66ch;
+}
+
+.lang-switch {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 170px;
+}
+
+.lang-switch__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.lang-switch__button {
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  background: var(--surface-raised);
+  color: var(--brand-ink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-switch__button:hover {
+  border-color: var(--brand-purple);
+  color: var(--brand-purple);
+}
+
+.lang-switch__button--active {
+  border-color: var(--brand-purple);
+  background: var(--brand-purple-soft);
+  color: var(--brand-purple);
+}
+
+.lang-switch__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.hero__eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.hero__title {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  color: color-mix(in srgb, var(--brand-ink) 84%, var(--brand-purple));
+}
+
+.hero__subtitle {
+  margin: 0.7rem 0 0;
+  max-width: 66ch;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.form-card {
+  max-width: 840px;
+  margin: 0 auto;
+  border: 1px solid color-mix(in srgb, var(--brand-primary) 28%, white);
+  border-radius: 1.4rem;
+  padding: 1rem;
+  background: color-mix(in srgb, var(--surface-raised) 90%, var(--brand-soft));
+  box-shadow: 0 20px 50px rgba(217, 54, 22, 0.14);
+  backdrop-filter: blur(4px);
+}
+
+.form {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.option-help {
+  margin: -0.25rem 0 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.feedback {
+  margin: 0;
+  border-radius: 0.85rem;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.feedback--error {
+  background: #ffe8de;
+  color: #8f240f;
+}
+
+.feedback--success {
+  background: #e5f7eb;
+  color: #17663a;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: #ffe7db;
+  color: #7a2a17;
+}
+
+.btn--primary {
+  margin-left: auto;
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-purple) 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(94, 46, 229, 0.28);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 3rem 1.4rem 4rem;
+  }
+
+  .form-card {
+    padding: 1.4rem;
+  }
+}

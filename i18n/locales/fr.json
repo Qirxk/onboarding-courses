@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "eyebrow": "FORMULAIRE DE SELECTION",
+    "title": "Formation informatique",
+    "subtitle": "Reponds avec sincerite. Tes reponses sont sauvegardees automatiquement a chaque etape."
+  },
+  "language": {
+    "label": "Langue",
+    "switch": "Changer de langue"
+  },
+  "progress": {
+    "step": "Etape"
+  },
+  "steps": {
+    "profile": "Informations personnelles",
+    "motivation": "Motivation",
+    "effort": "Effort & Discipline",
+    "reflection": "Reflexion",
+    "engagement": "Engagement"
+  },
+  "actions": {
+    "previous": "Precedent",
+    "next": "Continuer",
+    "submit": "Envoyer ma candidature",
+    "submitting": "Envoi en cours..."
+  },
+  "feedback": {
+    "success": "Candidature envoyee avec succes. Merci!",
+    "required": "Merci de remplir toutes les questions obligatoires de cette etape.",
+    "hours": "Le nombre d'heures par semaine doit etre superieur ou egal a 1.",
+    "email": "Merci d'entrer une adresse email valide.",
+    "phone": "Merci d'entrer un numero de telephone valide.",
+    "supabaseConfig": "Configuration Supabase manquante. Ajoute NUXT_PUBLIC_SUPABASE_URL et NUXT_PUBLIC_SUPABASE_ANON_KEY.",
+    "submitError": "Impossible d'envoyer les donnees pour le moment. Verifie la table et les policies Supabase."
+  },
+  "admin": {
+    "loginEyebrow": "ESPACE ADMIN",
+    "loginTitle": "Connexion administrateur",
+    "loginSubtitle": "Connecte-toi avec le nom d'utilisateur ou l'email, puis le mot de passe d'un administrateur enregistre dans Supabase.",
+    "dashboardEyebrow": "TABLEAU DE BORD",
+    "dashboardTitle": "Candidatures enregistrees",
+    "dashboardSubtitle": "Consulte, ouvre et supprime des candidatures depuis un espace protege.",
+    "detailEyebrow": "DETAIL CANDIDATURE",
+    "detailTitle": "Informations completes",
+    "identifierLabel": "Nom d'utilisateur ou email",
+    "identifierPlaceholder": "Entre le nom d'utilisateur ou l'email",
+    "passwordLabel": "Mot de passe administrateur",
+    "passwordPlaceholder": "Entre le mot de passe",
+    "login": "Se connecter",
+    "loggingIn": "Connexion...",
+    "logout": "Se deconnecter",
+    "refresh": "Actualiser",
+    "open": "Ouvrir",
+    "back": "Retour a la liste",
+    "delete": "Supprimer",
+    "deleting": "Suppression...",
+    "empty": "Aucune candidature pour le moment.",
+    "submittedAt": "Date d'envoi",
+    "source": "Source",
+    "id": "Identifiant",
+    "listError": "Impossible de charger les candidatures.",
+    "detailError": "Impossible de charger cette candidature.",
+    "identifierRequired": "Entre un nom d'utilisateur ou un email.",
+    "passwordRequired": "Entre le mot de passe administrateur.",
+    "loginError": "Mot de passe invalide ou acces non autorise.",
+    "deleteError": "La suppression a echoue.",
+    "deleteConfirm": "Cette action est irreversible. Veux-tu vraiment supprimer cette candidature ?"
+  },
+  "questions": {
+    "fullName": {
+      "label": "Nom complet",
+      "placeholder": "Exemple: Aicha Ndiaye"
+    },
+    "email": {
+      "label": "Adresse email",
+      "placeholder": "Exemple: aicha[at]email.com"
+    },
+    "actualGrade": {
+      "label": "Niveau actuel / classe / diplome",
+      "placeholder": "Exemple: Terminale, Licence 2, reconversion..."
+    },
+    "phoneNumber": {
+      "label": "Numero de telephone",
+      "placeholder": "Exemple: +221 77 123 45 67"
+    },
+    "whyProgramming": {
+      "label": "1. Pourquoi veux-tu apprendre la programmation ? (3-5 lignes)",
+      "placeholder": "Explique ton pourquoi en quelques lignes..."
+    },
+    "whatBuild": {
+      "label": "2. Qu'est-ce que tu veux construire apres cette formation ?",
+      "placeholder": "Exemple: une app pour aider les associations locales..."
+    },
+    "techTried": {
+      "label": "3. Qu'as-tu deja essaye d'apprendre dans la tech ?",
+      "placeholder": "Cours, tutos, projets, autoformation..."
+    },
+    "hoursPerWeek": {
+      "label": "4. Combien d'heures par semaine peux-tu consacrer a cette formation ?",
+      "placeholder": "Exemple: 8"
+    },
+    "difficultThing": {
+      "label": "5. Donne un exemple de quelque chose de difficile que tu as reussi a terminer.",
+      "placeholder": "Raconte le contexte, les obstacles et le resultat..."
+    },
+    "biggestNumberMethod": {
+      "label": "6. Comment trouver le plus grand nombre dans une liste ? (sans code)",
+      "placeholder": "Decris ta methode simplement..."
+    },
+    "teaSteps": {
+      "label": "7. Explique comment preparer du thé etape par etape.",
+      "placeholder": "Detaille les etapes dans l'ordre..."
+    },
+    "firstWhenBroken": {
+      "label": "8. Si quelque chose ne fonctionne pas, que fais-tu en premier ?",
+      "placeholder": "Quelle est ta premiere action pour diagnostiquer ?"
+    },
+    "whatCouldStop": {
+      "label": "9. Qu'est-ce qui pourrait te faire abandonner cette formation ?",
+      "placeholder": "Sois transparent sur les risques ou limites..."
+    },
+    "whyChooseYou": {
+      "label": "10. Pourquoi devrions-nous te choisir toi parmi les autres ?",
+      "placeholder": "Mets en avant ta motivation et ton engagement..."
+    }
+  }
+}
