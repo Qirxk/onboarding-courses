@@ -26,7 +26,29 @@ import * as logger from "firebase-functions/logger";
 // this will be the maximum concurrent request count.
 setGlobalOptions({ maxInstances: 10 });
 
-// export const helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+// Nuxt SSR handler for Firebase Functions
+import { resolve } from 'node:path';
+import { existsSync } from 'node:fs';
+
+let nuxtHandler: any;
+
+export const nuxtApp = onRequest(async (req, res) => {
+	try {
+		if (!nuxtHandler) {
+			// Path to the Nuxt server entry
+			const nuxtServerPath = resolve(__dirname, '../../.output/server/index.mjs');
+			if (!existsSync(nuxtServerPath)) {
+				res.status(500).send('Nuxt server build not found. Did you run `yarn build`?');
+				return;
+			}
+			// Dynamically import the Nuxt server handler
+			const { default: handler } = await import(nuxtServerPath);
+			nuxtHandler = handler;
+		}
+		nuxtHandler(req, res);
+	} catch (err: unknown) {
+		logger.error('Nuxt SSR error', err);
+		const message = typeof err === 'object' && err && 'message' in err ? (err as any).message : String(err);
+		res.status(500).send('Nuxt SSR error: ' + message);
+	}
+});
