@@ -24,31 +24,34 @@ import * as logger from "firebase-functions/logger";
 // functions should each use functions.runWith({ maxInstances: 10 }) instead.
 // In the v1 API, each function can only serve one request per container, so
 // this will be the maximum concurrent request count.
-setGlobalOptions({ maxInstances: 10 });
+
+setGlobalOptions({maxInstances: 10});
 
 // Nuxt SSR handler for Firebase Functions
-import { resolve } from 'node:path';
-import { existsSync } from 'node:fs';
 
-let nuxtHandler: any;
+import {resolve} from "node:path";
+import {existsSync} from "node:fs";
+
+
+let nuxtHandler: unknown;
 
 export const nuxtApp = onRequest(async (req, res) => {
 	try {
 		if (!nuxtHandler) {
 			// Path to the Nuxt server entry
-			const nuxtServerPath = resolve(__dirname, '../../.output/server/index.mjs');
+			const nuxtServerPath = resolve(__dirname, "../../.output/server/index.mjs");
 			if (!existsSync(nuxtServerPath)) {
-				res.status(500).send('Nuxt server build not found. Did you run `yarn build`?');
+				res.status(500).send("Nuxt server build not found. Did you run 'yarn build'?");
 				return;
 			}
 			// Dynamically import the Nuxt server handler
-			const { default: handler } = await import(nuxtServerPath);
+			const {default: handler} = await import(nuxtServerPath);
 			nuxtHandler = handler;
 		}
-		nuxtHandler(req, res);
+		(nuxtHandler as (req: unknown, res: unknown) => void)(req, res);
 	} catch (err: unknown) {
-		logger.error('Nuxt SSR error', err);
-		const message = typeof err === 'object' && err && 'message' in err ? (err as any).message : String(err);
-		res.status(500).send('Nuxt SSR error: ' + message);
+		logger.error("Nuxt SSR error", err);
+		const message = typeof err === "object" && err && "message" in err ? (err as {message?: string}).message : String(err);
+		res.status(500).send("Nuxt SSR error: " + message);
 	}
 });
