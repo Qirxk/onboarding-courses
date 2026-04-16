@@ -2,6 +2,8 @@
 main.page
   section.hero
     .hero__top
+      .hero__brand
+        img.hero__brand-logo(:src="shelterLogo" alt="Tech Shelter")
       .hero__copy
         p.hero__eyebrow {{ t('surveyMeta.eyebrow') }}
         h1.hero__title {{ t('surveyMeta.title') }}
@@ -178,6 +180,8 @@ main.page
 </template>
 
 <script setup lang="ts">
+import shelterLogo from '~/assets/logo/logo-shelter.png'
+
 const { t, locale, locales, setLocale } = useI18n({ useScope: 'global' })
 
 useHead({ title: () => t('surveyMeta.title') })

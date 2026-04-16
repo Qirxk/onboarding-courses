@@ -34,9 +34,20 @@
 .landing-topbar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 0.8rem;
   margin-bottom: 2rem;
+}
+
+.landing-brand {
+  display: flex;
+  align-items: center;
+}
+
+.landing-brand__logo {
+  width: clamp(130px, 18vw, 150px);
+  height: auto;
+  object-fit: contain;
 }
 
 .landing-topbar__label,
@@ -444,6 +455,10 @@
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 1.4rem;
+  }
+
+  .landing-brand__logo {
+    width: 130px;
   }
 
   .landing-title {

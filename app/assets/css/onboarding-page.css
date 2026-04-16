@@ -37,6 +37,16 @@
   justify-content: space-between;
 }
 
+.hero__brand {
+  flex: 1 1 100%;
+}
+
+.hero__brand-logo {
+  width: clamp(130px, 20vw, 150px);
+  height: auto;
+  object-fit: contain;
+}
+
 .hero__copy {
   max-width: 66ch;
 }
@@ -190,6 +200,10 @@
 @media (min-width: 768px) {
   .page {
     padding: 3rem 1.4rem 4rem;
+  }
+
+  .hero__brand {
+    flex: 0 0 auto;
   }
 
   .form-card {

@@ -3,6 +3,8 @@ main.landing-page
   section.landing-hero
     .landing-shell
       .landing-topbar
+        .landing-brand
+          img.landing-brand__logo(:src="shelterLogo" alt="Tech Shelter")
         p.landing-topbar__label {{ t('language.label') }}
         .landing-topbar__actions
           button.landing-chip(
@@ -100,6 +102,8 @@ interface LandingStat {
   value: string
   label: string
 }
+
+import shelterLogo from '~/assets/logo/logo-shelter.png'
 
 const { t, tm, rt, locale, locales, setLocale } = useI18n({ useScope: 'global' })
 
