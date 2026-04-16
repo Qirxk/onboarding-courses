@@ -15,7 +15,7 @@
     },
     "hero": {
       "eyebrow": "Three-month intensive program",
-      "title": "Think Like a Computer Scientist",
+      "title": "Tech Mastery Program",
       "subtitle": "A progressive training program designed to build strong foundations in logic, programming, system modeling, and practical AI usage, ending with a mini project and a final Demo Day.",
       "primaryCta": "Start the survey",
       "secondaryCta": "Explore the program",
@@ -49,7 +49,7 @@
         {
           "id": "month-1",
           "eyebrow": "MONTH 1 — COMPUTING FOUNDATIONS",
-          "title": "Think Like a Computer Scientist",
+          "title": "Tech Mastery Program",
           "subtitle": "Build the logical habits needed to understand and solve problems clearly.",
           "weeks": [
             {

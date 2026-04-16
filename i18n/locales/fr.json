@@ -15,7 +15,7 @@
     },
     "hero": {
       "eyebrow": "Formation intensive sur 3 mois",
-      "title": "Think Like a Computer Scientist",
+      "title": "Tech Mastery Program",
       "subtitle": "Une formation progressive pour construire des bases solides en logique, programmation, modelisation et usage intelligent de l'IA, avec un mini projet puis un Demo Day final.",
       "primaryCta": "Commencer le questionnaire",
       "secondaryCta": "Voir le programme",
@@ -49,7 +49,7 @@
         {
           "id": "month-1",
           "eyebrow": "MOIS 1 — FONDATIONS INFORMATIQUES",
-          "title": "Think Like a Computer Scientist",
+          "title": "Tech Mastery Program",
           "subtitle": "Construire les reflexes logiques qui permettent de comprendre et resoudre un probleme.",
           "weeks": [
             {
