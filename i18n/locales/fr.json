@@ -1,13 +1,13 @@
 {
   "meta": {
-    "eyebrow": "FORMULAIRE DE SELECTION",
+    "eyebrow": "FORMULAIRE DE SÉLECTION",
     "title": "Tech Mastery Program",
-    "subtitle": "Reponds avec sincerite. Tes reponses sont sauvegardees automatiquement a chaque etape."
+    "subtitle": "Réponds avec sincérité. Tes réponses sont sauvegardées automatiquement à chaque étape."
   },
   "surveyMeta": {
-    "eyebrow": "FORMULAIRE DE SELECTION",
+    "eyebrow": "FORMULAIRE DE SÉLECTION",
     "title": "Tech Mastery Program",
-    "subtitle": "Reponds avec sincerite. Tes reponses sont sauvegardees automatiquement a chaque etape."
+    "subtitle": "Réponds avec sincérité. Tes réponses sont sauvegardées automatiquement à chaque étape."
   },
   "landing": {
     "meta": {
@@ -16,11 +16,11 @@
     "hero": {
       "eyebrow": "Formation intensive sur 3 mois",
       "title": "Tech Mastery Program",
-      "subtitle": "Une formation progressive pour construire des bases solides en logique, programmation, modelisation et usage intelligent de l'IA, avec un mini projet puis un Demo Day final.",
+      "subtitle": "Une formation progressive pour construire des bases solides en logique, programmation, modélisation et usage intelligent de l'IA, avec un mini-projet puis un Demo Day final.",
       "primaryCta": "Commencer le questionnaire",
       "secondaryCta": "Voir le programme",
       "visualEyebrow": "Parcours",
-      "visualTitle": "Du raisonnement logique a la creation de solutions utiles.",
+      "visualTitle": "Du raisonnement logique à la création de solutions utiles.",
       "visualCards": {
         "logic": "Logique et algorithmes",
         "code": "JavaScript et Ruby",
@@ -43,22 +43,22 @@
     },
     "program": {
       "eyebrow": "Contenu de la formation",
-      "title": "Un parcours construit comme une montee en puissance.",
-      "subtitle": "Chaque mois consolide une competence cle avant de passer au suivant: penser, construire, puis orchestrer avec l'IA.",
+      "title": "Un parcours construit comme une montée en puissance.",
+      "subtitle": "Chaque mois consolide une compétence clé avant de passer au suivant : penser, construire, puis orchestrer avec l'IA.",
       "months": [
         {
           "id": "month-1",
           "eyebrow": "MOIS 1 — FONDATIONS INFORMATIQUES",
           "title": "Tech Mastery Program",
-          "subtitle": "Construire les reflexes logiques qui permettent de comprendre et resoudre un probleme.",
+          "subtitle": "Construire les réflexes logiques qui permettent de comprendre et de résoudre un problème.",
           "weeks": [
             {
               "step": "Semaine 1",
-              "title": "Pensee algorithmique",
+              "title": "Pensée algorithmique",
               "topics": [
-                "Definition d'un algorithme",
-                "Decomposition de problemes",
-                "Sequences d'instructions",
+                "Définition d'un algorithme",
+                "Décomposition de problèmes",
+                "Séquences d'instructions",
                 "Exercices sans ordinateur"
               ]
             },
@@ -69,7 +69,7 @@
                 "Conditions (si / sinon)",
                 "Comparaisons",
                 "Logique simple (ET / OU)",
-                "Prise de decision"
+                "Prise de décision"
               ]
             },
             {
@@ -77,14 +77,14 @@
               "title": "Introduction au JavaScript",
               "topics": [
                 "Variables",
-                "Types de donnees",
+                "Types de données",
                 "Fonctions",
                 "Tableaux"
               ]
             },
             {
               "step": "Semaine 4",
-              "title": "Structures de controle",
+              "title": "Structures de contrôle",
               "topics": [
                 "Boucles (for, while)",
                 "Parcours de tableaux",
@@ -98,20 +98,20 @@
           "id": "month-2",
           "eyebrow": "MOIS 2 — PROGRAMMATION & OOP",
           "title": "Build Like an Engineer",
-          "subtitle": "Passer de scripts isoles a une maniere structuree de modeliser des systemes reels.",
+          "subtitle": "Passer de scripts isolés à une manière structurée de modéliser des systèmes réels.",
           "weeks": [
             {
               "step": "Semaine 5",
               "title": "Bases de Ruby",
               "topics": [
                 "Syntaxe Ruby",
-                "Variables & methodes",
+                "Variables & méthodes",
                 "Conditions et boucles"
               ]
             },
             {
               "step": "Semaine 6",
-              "title": "Programmation orientee objet (OOP)",
+              "title": "Programmation orientée objet (OOP)",
               "topics": [
                 "Classes",
                 "Objets",
@@ -121,16 +121,16 @@
             },
             {
               "step": "Semaine 7",
-              "title": "Modelisation",
+              "title": "Modélisation",
               "topics": [
-                "Transformer un probleme reel en objets",
+                "Transformer un problème réel en objets",
                 "Relations entre objets",
                 "Cas concrets (commerce, transport, logement)"
               ]
             },
             {
               "step": "Semaine 8",
-              "title": "Qualite & debugging",
+              "title": "Qualité & debugging",
               "topics": [
                 "Lire et comprendre du code",
                 "Identifier les erreurs",
@@ -144,16 +144,16 @@
           "id": "month-3",
           "eyebrow": "MOIS 3 — IA & ORCHESTRATION",
           "title": "Lead the AI Revolution",
-          "subtitle": "Apprendre a utiliser l'IA comme levier de productivite et de resolution de problemes locaux.",
+          "subtitle": "Apprendre à utiliser l'IA comme levier de productivité et de résolution de problèmes locaux.",
           "weeks": [
             {
               "step": "Semaine 9",
-              "title": "Introduction a l'IA",
+              "title": "Introduction à l'IA",
               "topics": [
                 "Qu'est-ce que l'IA",
                 "Limites et risques",
                 "Prompting de base",
-                "Comprendre les modeles"
+                "Comprendre les modèles"
               ]
             },
             {
@@ -170,8 +170,8 @@
               "step": "Semaine 11",
               "title": "Applications business",
               "topics": [
-                "Resolution de problemes reels en Cote d'Ivoire",
-                "Cas: commerce, tourisme, education",
+                "Résolution de problèmes réels en Côte d'Ivoire",
+                "Cas : commerce, tourisme, éducation",
                 "Construction d'un mini projet"
               ]
             },
@@ -180,7 +180,7 @@
               "title": "Projet final & Demo Day",
               "topics": [
                 "Finalisation du projet",
-                "Presentation",
+                "Présentation",
                 "Pitch",
                 "Feedback"
               ]
@@ -190,22 +190,22 @@
       ]
     },
     "skills": {
-      "eyebrow": "Competences a la fin",
+      "eyebrow": "Compétences à la fin",
       "title": "Ce que les participants sauront faire.",
-      "subtitle": "La formation vise des competences directement reutilisables dans des contextes locaux, entrepreneuriaux et professionnels.",
+      "subtitle": "La formation vise des compétences directement réutilisables dans des contextes locaux, entrepreneuriaux et professionnels.",
       "items": [
-        "Pensee logique et algorithmique",
+        "Pensée logique et algorithmique",
         "Programmation (JavaScript + Ruby)",
-        "Modelisation de systemes reels",
+        "Modélisation de systèmes réels",
         "Utilisation intelligente de l'IA",
-        "Resolution de problemes locaux"
+        "Résolution de problèmes locaux"
       ]
     },
     "schedule": {
       "eyebrow": "Horaires de la formation",
-      "title": "Un rythme hebdomadaire pense pour la regularite.",
-      "subtitle": "La formation se deroule chaque semaine avec une session en ligne et une session en presentiel.",
-      "startDate": "Date de debut : Premiere semaine de Mai.",
+      "title": "Un rythme hebdomadaire pensé pour la régularité.",
+      "subtitle": "La formation se déroule chaque semaine avec une session en ligne et une session en présentiel.",
+      "startDate": "Date de début : première semaine de Mai.",
       "wednesday": {
         "day": "Mercredi",
         "mode": "En ligne",
@@ -213,15 +213,15 @@
       },
       "saturday": {
         "day": "Samedi",
-        "mode": "Presentiel",
+        "mode": "Présentiel",
         "hoursMorning": "10h - 12h",
         "hoursAfternoon": "14h - 16h"
       }
     },
     "cta": {
-      "eyebrow": "Pret a postuler",
-      "title": "Passe au questionnaire de selection.",
-      "subtitle": "Le formulaire prend en compte ta motivation, ta logique et ta capacite d'engagement. Reponds avec precision et sincerite.",
+      "eyebrow": "Prêt à postuler",
+      "title": "Passe au questionnaire de sélection.",
+      "subtitle": "Le formulaire prend en compte ta motivation, ta logique et ta capacité d'engagement. Réponds avec précision et sincérité.",
       "button": "Aller au questionnaire"
     }
   },
@@ -230,17 +230,17 @@
     "switch": "Changer de langue"
   },
   "progress": {
-    "step": "Etape"
+    "step": "Étape"
   },
   "steps": {
     "profile": "Informations personnelles",
     "motivation": "Motivation",
     "effort": "Effort & Discipline",
-    "reflection": "Reflexion",
+    "reflection": "Réflexion",
     "engagement": "Engagement"
   },
   "actions": {
-    "previous": "Precedent",
+    "previous": "Précédent",
     "next": "Continuer",
     "submit": "Envoyer ma candidature",
     "submitting": "Envoi en cours..."
@@ -249,7 +249,7 @@
     "howHeardAbout": [
       {
         "value": "social_network",
-        "label": "Reseau social"
+        "label": "Réseau social"
       },
       {
         "value": "referral",
@@ -266,33 +266,33 @@
     ]
   },
   "feedback": {
-    "success": "Candidature envoyee avec succes. Merci!",
-    "required": "Merci de remplir toutes les questions obligatoires de cette etape.",
-    "hours": "Le nombre d'heures par semaine doit etre superieur ou egal a 1.",
+    "success": "Candidature envoyée avec succès. Merci !",
+    "required": "Merci de remplir toutes les questions obligatoires de cette étape.",
+    "hours": "Le nombre d'heures par semaine doit être supérieur ou égal à 1.",
     "email": "Merci d'entrer une adresse email valide.",
-    "phone": "Merci d'entrer un numero de telephone valide.",
+    "phone": "Merci d'entrer un numéro de téléphone valide.",
     "supabaseConfig": "Configuration Supabase manquante. Ajoute NUXT_PUBLIC_SUPABASE_URL et NUXT_PUBLIC_SUPABASE_ANON_KEY.",
-    "submitError": "Impossible d'envoyer les donnees pour le moment. Verifie la table et les policies Supabase."
+    "submitError": "Impossible d'envoyer les données pour le moment. Vérifie la table et les policies Supabase."
   },
   "admin": {
     "loginEyebrow": "ESPACE ADMIN",
     "loginTitle": "Connexion administrateur",
-    "loginSubtitle": "Connecte-toi avec le nom d'utilisateur ou l'email, puis le mot de passe d'un administrateur enregistre dans Supabase.",
+    "loginSubtitle": "Connecte-toi avec le nom d'utilisateur ou l'email, puis le mot de passe d'un administrateur enregistré dans Supabase.",
     "dashboardEyebrow": "TABLEAU DE BORD",
-    "dashboardTitle": "Candidatures enregistrees",
-    "dashboardSubtitle": "Consulte, ouvre et supprime des candidatures depuis un espace protege.",
-    "detailEyebrow": "DETAIL CANDIDATURE",
-    "detailTitle": "Informations completes",
+    "dashboardTitle": "Candidatures enregistrées",
+    "dashboardSubtitle": "Consulte, ouvre et supprime des candidatures depuis un espace protégé.",
+    "detailEyebrow": "DÉTAIL CANDIDATURE",
+    "detailTitle": "Informations complètes",
     "identifierLabel": "Nom d'utilisateur ou email",
     "identifierPlaceholder": "Entre le nom d'utilisateur ou l'email",
     "passwordLabel": "Mot de passe administrateur",
     "passwordPlaceholder": "Entre le mot de passe",
     "login": "Se connecter",
     "loggingIn": "Connexion...",
-    "logout": "Se deconnecter",
+    "logout": "Se déconnecter",
     "refresh": "Actualiser",
     "open": "Ouvrir",
-    "back": "Retour a la liste",
+    "back": "Retour à la liste",
     "delete": "Supprimer",
     "deleting": "Suppression...",
     "empty": "Aucune candidature pour le moment.",
@@ -303,9 +303,9 @@
     "detailError": "Impossible de charger cette candidature.",
     "identifierRequired": "Entre un nom d'utilisateur ou un email.",
     "passwordRequired": "Entre le mot de passe administrateur.",
-    "loginError": "Mot de passe invalide ou acces non autorise.",
-    "deleteError": "La suppression a echoue.",
-    "deleteConfirm": "Cette action est irreversible. Veux-tu vraiment supprimer cette candidature ?"
+    "loginError": "Mot de passe invalide ou accès non autorisé.",
+    "deleteError": "La suppression a échoué.",
+    "deleteConfirm": "Cette action est irréversible. Veux-tu vraiment supprimer cette candidature ?"
   },
   "questions": {
     "fullName": {
@@ -317,11 +317,11 @@
       "placeholder": "Exemple: aicha[at]email.com"
     },
     "actualGrade": {
-      "label": "Niveau actuel / classe / diplome",
+      "label": "Niveau actuel / classe / diplôme",
       "placeholder": "Exemple: Terminale, Licence 2, reconversion..."
     },
     "phoneNumber": {
-      "label": "Numero de telephone",
+      "label": "Numéro de téléphone",
       "placeholder": "Exemple: +221 77 123 45 67"
     },
     "whyProgramming": {
@@ -329,32 +329,32 @@
       "placeholder": "Explique ton pourquoi en quelques lignes..."
     },
     "whatBuild": {
-      "label": "2. Qu'est-ce que tu veux construire apres cette formation ?",
+      "label": "2. Qu'est-ce que tu veux construire après cette formation ?",
       "placeholder": "Exemple: une app pour aider les associations locales..."
     },
     "techTried": {
-      "label": "3. Qu'as-tu deja essaye d'apprendre dans la tech ?",
+      "label": "3. Qu'as-tu déjà essayé d'apprendre dans la tech ?",
       "placeholder": "Cours, tutos, projets, autoformation..."
     },
     "hoursPerWeek": {
-      "label": "4. Combien d'heures par semaine peux-tu consacrer a cette formation ?",
+      "label": "4. Combien d'heures par semaine peux-tu consacrer à cette formation ?",
       "placeholder": "Exemple: 8"
     },
     "difficultThing": {
-      "label": "5. Donne un exemple de quelque chose de difficile que tu as reussi a terminer.",
-      "placeholder": "Raconte le contexte, les obstacles et le resultat..."
+      "label": "5. Donne un exemple de quelque chose de difficile que tu as réussi à terminer.",
+      "placeholder": "Raconte le contexte, les obstacles et le résultat..."
     },
     "biggestNumberMethod": {
       "label": "6. Comment trouver le plus grand nombre dans une liste ? (sans code)",
-      "placeholder": "Decris ta methode simplement..."
+      "placeholder": "Décris ta méthode simplement..."
     },
     "teaSteps": {
-      "label": "7. Explique comment preparer du thé etape par etape.",
-      "placeholder": "Detaille les etapes dans l'ordre..."
+      "label": "7. Explique comment préparer du thé étape par étape.",
+      "placeholder": "Détaille les étapes dans l'ordre..."
     },
     "firstWhenBroken": {
       "label": "8. Si quelque chose ne fonctionne pas, que fais-tu en premier ?",
-      "placeholder": "Quelle est ta premiere action pour diagnostiquer ?"
+      "placeholder": "Quelle est ta première action pour diagnostiquer ?"
     },
     "whatCouldStop": {
       "label": "9. Qu'est-ce qui pourrait te faire abandonner cette formation ?",
