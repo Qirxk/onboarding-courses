@@ -218,6 +218,21 @@
         "hoursAfternoon": "14h - 16h"
       }
     },
+    "practical": {
+      "location": {
+        "label": "Lieu",
+        "value": "Angré Djorobité 1"
+      },
+      "duration": {
+        "label": "Durée",
+        "value": "3 mois"
+      },
+      "pricing": {
+        "label": "Tarif",
+        "full": "150 000 FCFA pour 3 mois (paiement en une fois)",
+        "monthly": "60 000 FCFA par mois"
+      }
+    },
     "cta": {
       "eyebrow": "Prêt à postuler",
       "title": "Passe au questionnaire de sélection.",

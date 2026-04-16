@@ -96,6 +96,20 @@ main.landing-page
           p.landing-schedule__hours {{ t('landing.schedule.saturday.hoursMorning') }}
           p.landing-schedule__hours {{ t('landing.schedule.saturday.hoursAfternoon') }}
 
+      .landing-practical
+        article.landing-practical__card
+          p.landing-practical__label {{ t('landing.practical.duration.label') }}
+          p.landing-practical__value {{ t('landing.practical.duration.value') }}
+
+        article.landing-practical__card
+          p.landing-practical__label {{ t('landing.practical.location.label') }}
+          p.landing-practical__value {{ t('landing.practical.location.value') }}
+
+      article.landing-pricing-feature
+        p.landing-pricing-feature__label {{ t('landing.practical.pricing.label') }}
+        p.landing-pricing-feature__main {{ t('landing.practical.pricing.full') }}
+        p.landing-pricing-feature__secondary {{ t('landing.practical.pricing.monthly') }}
+
   section.landing-cta
     .landing-shell
       .landing-cta__panel

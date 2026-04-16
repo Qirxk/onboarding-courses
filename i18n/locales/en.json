@@ -218,6 +218,21 @@
         "hoursAfternoon": "14:00 - 16:00"
       }
     },
+    "practical": {
+      "location": {
+        "label": "Location",
+        "value": "Angre Djorobite 1"
+      },
+      "duration": {
+        "label": "Duration",
+        "value": "3 months"
+      },
+      "pricing": {
+        "label": "Pricing",
+        "full": "150,000 FCFA for 3 months (one-time payment)",
+        "monthly": "60,000 FCFA per month"
+      }
+    },
     "cta": {
       "eyebrow": "Ready to apply",
       "title": "Move to the selection survey.",
