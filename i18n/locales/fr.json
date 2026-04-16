@@ -1,8 +1,212 @@
 {
   "meta": {
     "eyebrow": "FORMULAIRE DE SELECTION",
-    "title": "Formation informatique",
+    "title": "Tech Mastery Program",
     "subtitle": "Reponds avec sincerite. Tes reponses sont sauvegardees automatiquement a chaque etape."
+  },
+  "surveyMeta": {
+    "eyebrow": "FORMULAIRE DE SELECTION",
+    "title": "Tech Mastery Program",
+    "subtitle": "Reponds avec sincerite. Tes reponses sont sauvegardees automatiquement a chaque etape."
+  },
+  "landing": {
+    "meta": {
+      "title": "Tech Mastery Program | Formation informatique et IA"
+    },
+    "hero": {
+      "eyebrow": "Formation intensive sur 3 mois",
+      "title": "Think Like a Computer Scientist",
+      "subtitle": "Une formation progressive pour construire des bases solides en logique, programmation, modelisation et usage intelligent de l'IA, avec un mini projet puis un Demo Day final.",
+      "primaryCta": "Commencer le questionnaire",
+      "secondaryCta": "Voir le programme",
+      "visualEyebrow": "Parcours",
+      "visualTitle": "Du raisonnement logique a la creation de solutions utiles.",
+      "visualCards": {
+        "logic": "Logique et algorithmes",
+        "code": "JavaScript et Ruby",
+        "ai": "IA, Copilot et agents"
+      },
+      "stats": [
+        {
+          "value": "12",
+          "label": "Semaines de progression"
+        },
+        {
+          "value": "3",
+          "label": "Mois de formation"
+        },
+        {
+          "value": "1",
+          "label": "Projet final à présenter"
+        }
+      ]
+    },
+    "program": {
+      "eyebrow": "Contenu de la formation",
+      "title": "Un parcours construit comme une montee en puissance.",
+      "subtitle": "Chaque mois consolide une competence cle avant de passer au suivant: penser, construire, puis orchestrer avec l'IA.",
+      "months": [
+        {
+          "id": "month-1",
+          "eyebrow": "MOIS 1 — FONDATIONS INFORMATIQUES",
+          "title": "Think Like a Computer Scientist",
+          "subtitle": "Construire les reflexes logiques qui permettent de comprendre et resoudre un probleme.",
+          "weeks": [
+            {
+              "step": "Semaine 1",
+              "title": "Pensee algorithmique",
+              "topics": [
+                "Definition d'un algorithme",
+                "Decomposition de problemes",
+                "Sequences d'instructions",
+                "Exercices sans ordinateur"
+              ]
+            },
+            {
+              "step": "Semaine 2",
+              "title": "Logique & conditions",
+              "topics": [
+                "Conditions (si / sinon)",
+                "Comparaisons",
+                "Logique simple (ET / OU)",
+                "Prise de decision"
+              ]
+            },
+            {
+              "step": "Semaine 3",
+              "title": "Introduction au JavaScript",
+              "topics": [
+                "Variables",
+                "Types de donnees",
+                "Fonctions",
+                "Tableaux"
+              ]
+            },
+            {
+              "step": "Semaine 4",
+              "title": "Structures de controle",
+              "topics": [
+                "Boucles (for, while)",
+                "Parcours de tableaux",
+                "Recherche simple",
+                "Tri basique"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "month-2",
+          "eyebrow": "MOIS 2 — PROGRAMMATION & OOP",
+          "title": "Build Like an Engineer",
+          "subtitle": "Passer de scripts isoles a une maniere structuree de modeliser des systemes reels.",
+          "weeks": [
+            {
+              "step": "Semaine 5",
+              "title": "Bases de Ruby",
+              "topics": [
+                "Syntaxe Ruby",
+                "Variables & methodes",
+                "Conditions et boucles"
+              ]
+            },
+            {
+              "step": "Semaine 6",
+              "title": "Programmation orientee objet (OOP)",
+              "topics": [
+                "Classes",
+                "Objets",
+                "Attributs",
+                "Encapsulation"
+              ]
+            },
+            {
+              "step": "Semaine 7",
+              "title": "Modelisation",
+              "topics": [
+                "Transformer un probleme reel en objets",
+                "Relations entre objets",
+                "Cas concrets (commerce, transport, logement)"
+              ]
+            },
+            {
+              "step": "Semaine 8",
+              "title": "Qualite & debugging",
+              "topics": [
+                "Lire et comprendre du code",
+                "Identifier les erreurs",
+                "Corriger des bugs",
+                "Bonnes pratiques"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "month-3",
+          "eyebrow": "MOIS 3 — IA & ORCHESTRATION",
+          "title": "Lead the AI Revolution",
+          "subtitle": "Apprendre a utiliser l'IA comme levier de productivite et de resolution de problemes locaux.",
+          "weeks": [
+            {
+              "step": "Semaine 9",
+              "title": "Introduction a l'IA",
+              "topics": [
+                "Qu'est-ce que l'IA",
+                "Limites et risques",
+                "Prompting de base",
+                "Comprendre les modeles"
+              ]
+            },
+            {
+              "step": "Semaine 10",
+              "title": "Outils IA & agents",
+              "topics": [
+                "Utilisation de GitHub Copilot",
+                "Introduction aux agents",
+                "Automatisation simple",
+                "Interaction humain + IA"
+              ]
+            },
+            {
+              "step": "Semaine 11",
+              "title": "Applications business",
+              "topics": [
+                "Resolution de problemes reels en Cote d'Ivoire",
+                "Cas: commerce, tourisme, education",
+                "Construction d'un mini projet"
+              ]
+            },
+            {
+              "step": "Semaine 12",
+              "title": "Projet final & Demo Day",
+              "topics": [
+                "Finalisation du projet",
+                "Presentation",
+                "Pitch",
+                "Feedback"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "eyebrow": "Competences a la fin",
+      "title": "Ce que les participants sauront faire.",
+      "subtitle": "La formation vise des competences directement reutilisables dans des contextes locaux, entrepreneuriaux et professionnels.",
+      "items": [
+        "Pensee logique et algorithmique",
+        "Programmation (JavaScript + Ruby)",
+        "Modelisation de systemes reels",
+        "Utilisation intelligente de l'IA",
+        "Resolution de problemes locaux"
+      ]
+    },
+    "cta": {
+      "eyebrow": "Pret a postuler",
+      "title": "Passe au questionnaire de selection.",
+      "subtitle": "Le formulaire prend en compte ta motivation, ta logique et ta capacite d'engagement. Reponds avec precision et sincerite.",
+      "button": "Aller au questionnaire"
+    }
   },
   "language": {
     "label": "Langue",

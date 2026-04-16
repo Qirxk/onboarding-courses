@@ -1,186 +1,109 @@
 <template lang="pug">
-main.page
-  section.hero
-    .hero__top
-      .hero__copy
-        p.hero__eyebrow {{ t('meta.eyebrow') }}
-        h1.hero__title {{ t('meta.title') }}
-        p.hero__subtitle
-          | {{ t('meta.subtitle') }}
-      .lang-switch
-        p.lang-switch__label {{ t('language.label') }}
-        .lang-switch__actions
-          button.lang-switch__button(
+main.landing-page
+  section.landing-hero
+    .landing-shell
+      .landing-topbar
+        p.landing-topbar__label {{ t('language.label') }}
+        .landing-topbar__actions
+          button.landing-chip(
             v-for="item in localeOptions"
             :key="item.code"
             type="button"
-            :class="{ 'lang-switch__button--active': item.code === locale }"
+            :class="{ 'landing-chip--active': item.code === locale }"
             @click="setLocale(item.code)"
           )
             | {{ item.name }}
 
-  section.form-card
-    OnboardingStepProgress(
-      :current-step="currentStep"
-      :total-steps="steps.length"
-      :step-titles="stepTitles"
-      :step-label="t('progress.step')"
-    )
+      .landing-hero__grid
+        .landing-hero__copy
+          p.landing-eyebrow {{ t('landing.hero.eyebrow') }}
+          h1.landing-title {{ t('landing.hero.title') }}
+          p.landing-subtitle {{ t('landing.hero.subtitle') }}
 
-    form.form(@submit.prevent="handleSubmit")
-      template(v-if="currentStepData.id === 'profile'")
-        OnboardingFormField(
-          id="fullName"
-          v-model="formData.fullName"
-          type="text"
-          :label="t('questions.fullName.label')"
-          :placeholder="t('questions.fullName.placeholder')"
-          :required="true"
-          :rows="1"
-        )
-        OnboardingFormField(
-          id="email"
-          v-model="formData.email"
-          type="email"
-          :label="t('questions.email.label')"
-          :placeholder="t('questions.email.placeholder')"
-          :required="true"
-          :rows="1"
-        )
-        OnboardingFormField(
-          id="actualGrade"
-          v-model="formData.actualGrade"
-          type="text"
-          :label="t('questions.actualGrade.label')"
-          :placeholder="t('questions.actualGrade.placeholder')"
-          :required="true"
-          :rows="1"
-        )
-        OnboardingFormField(
-          id="phoneNumber"
-          v-model="formData.phoneNumber"
-          type="tel"
-          :label="t('questions.phoneNumber.label')"
-          :placeholder="t('questions.phoneNumber.placeholder')"
-          :required="true"
-          :rows="1"
-        )
+          .landing-stats
+            article.landing-stat(v-for="stat in stats" :key="stat.value")
+              p.landing-stat__value {{ stat.value }}
+              p.landing-stat__label {{ stat.label }}
 
-      template(v-else-if="currentStepData.id === 'motivation'")
-        OnboardingFormField(
-          id="whyProgramming"
-          v-model="formData.whyProgramming"
-          :label="t('questions.whyProgramming.label')"
-          :placeholder="t('questions.whyProgramming.placeholder')"
-          :required="true"
-          :rows="5"
-        )
-        OnboardingFormField(
-          id="whatBuild"
-          v-model="formData.whatBuild"
-          :label="t('questions.whatBuild.label')"
-          :placeholder="t('questions.whatBuild.placeholder')"
-          :required="true"
-          :rows="4"
-        )
+          .landing-actions
+            NuxtLink.landing-button.landing-button--primary(to="/survey") {{ t('landing.hero.primaryCta') }}
+            a.landing-button.landing-button--ghost(href="#program") {{ t('landing.hero.secondaryCta') }}
 
-      template(v-else-if="currentStepData.id === 'effort'")
-        OnboardingFormField(
-          id="techTried"
-          v-model="formData.techTried"
-          :label="t('questions.techTried.label')"
-          :placeholder="t('questions.techTried.placeholder')"
-          :required="true"
-          :rows="4"
-        )
-        OnboardingFormField(
-          id="hoursPerWeek"
-          v-model="formData.hoursPerWeek"
-          type="number"
-          :label="t('questions.hoursPerWeek.label')"
-          :placeholder="t('questions.hoursPerWeek.placeholder')"
-          :required="true"
-          :min="1"
-          :max="80"
-        )
-        OnboardingFormField(
-          id="difficultThing"
-          v-model="formData.difficultThing"
-          :label="t('questions.difficultThing.label')"
-          :placeholder="t('questions.difficultThing.placeholder')"
-          :required="true"
-          :rows="4"
-        )
+        .landing-hero__visual(aria-hidden="true")
+          .landing-orbit
+            .landing-orbit__core
+              span.landing-orbit__eyebrow {{ t('landing.hero.visualEyebrow') }}
+              strong.landing-orbit__title {{ t('landing.hero.visualTitle') }}
+            .landing-orbit__card.landing-orbit__card--top {{ t('landing.hero.visualCards.logic') }}
+            .landing-orbit__card.landing-orbit__card--right {{ t('landing.hero.visualCards.code') }}
+            .landing-orbit__card.landing-orbit__card--bottom {{ t('landing.hero.visualCards.ai') }}
 
-      template(v-else-if="currentStepData.id === 'reflection'")
-        OnboardingFormField(
-          id="biggestNumberMethod"
-          v-model="formData.biggestNumberMethod"
-          :label="t('questions.biggestNumberMethod.label')"
-          :placeholder="t('questions.biggestNumberMethod.placeholder')"
-          :required="true"
-          :rows="4"
-        )
-        OnboardingFormField(
-          id="teaSteps"
-          v-model="formData.teaSteps"
-          :label="t('questions.teaSteps.label')"
-          :placeholder="t('questions.teaSteps.placeholder')"
-          :required="true"
-          :rows="5"
-        )
-        OnboardingFormField(
-          id="firstWhenBroken"
-          v-model="formData.firstWhenBroken"
-          :label="t('questions.firstWhenBroken.label')"
-          :placeholder="t('questions.firstWhenBroken.placeholder')"
-          :required="true"
-          :rows="4"
-        )
+  section#program.landing-section
+    .landing-shell
+      .landing-section__header
+        p.landing-section__eyebrow {{ t('landing.program.eyebrow') }}
+        h2.landing-section__title {{ t('landing.program.title') }}
+        p.landing-section__subtitle {{ t('landing.program.subtitle') }}
 
-      template(v-else-if="currentStepData.id === 'engagement'")
-        OnboardingFormField(
-          id="whatCouldStop"
-          v-model="formData.whatCouldStop"
-          :label="t('questions.whatCouldStop.label')"
-          :placeholder="t('questions.whatCouldStop.placeholder')"
-          :required="true"
-          :rows="4"
-        )
-        OnboardingFormField(
-          id="whyChooseYou"
-          v-model="formData.whyChooseYou"
-          :label="t('questions.whyChooseYou.label')"
-          :placeholder="t('questions.whyChooseYou.placeholder')"
-          :required="true"
-          :rows="4"
-        )
+      .landing-months
+        article.landing-month(v-for="month in months" :key="month.id")
+          .landing-month__header
+            p.landing-month__eyebrow {{ month.eyebrow }}
+            h3.landing-month__title {{ month.title }}
+            p.landing-month__subtitle {{ month.subtitle }}
 
-      p.feedback.feedback--error(v-if="errorMessage") {{ errorMessage }}
-      p.feedback.feedback--success(v-if="successMessage") {{ successMessage }}
+          .landing-weeks
+            article.landing-week(v-for="week in month.weeks" :key="week.title")
+              p.landing-week__step {{ week.step }}
+              h4.landing-week__title {{ week.title }}
+              ul.landing-week__topics
+                li(v-for="topic in week.topics" :key="topic") {{ topic }}
 
-      .actions
-        button.btn.btn--ghost(type="button" @click="goToPreviousStep" :disabled="currentStep === 0 || isSubmitting")
-          | {{ t('actions.previous') }}
-        button.btn.btn--primary(
-          v-if="!isLastStep"
-          type="button"
-          @click="goToNextStep"
-          :disabled="isSubmitting"
-        )
-          | {{ t('actions.next') }}
-        button.btn.btn--primary(
-          v-else
-          type="submit"
-          :disabled="isSubmitting"
-        )
-          | {{ isSubmitting ? t('actions.submitting') : t('actions.submit') }}
+  section.landing-section.landing-section--skills
+    .landing-shell
+      .landing-skills
+        .landing-skills__copy
+          p.landing-section__eyebrow {{ t('landing.skills.eyebrow') }}
+          h2.landing-section__title {{ t('landing.skills.title') }}
+          p.landing-section__subtitle {{ t('landing.skills.subtitle') }}
+        .landing-skills__list
+          article.landing-skill(v-for="skill in skills" :key="skill")
+            span.landing-skill__dot
+            p {{ skill }}
+
+  section.landing-cta
+    .landing-shell
+      .landing-cta__panel
+        .landing-cta__copy
+          p.landing-section__eyebrow {{ t('landing.cta.eyebrow') }}
+          h2.landing-section__title {{ t('landing.cta.title') }}
+          p.landing-section__subtitle {{ t('landing.cta.subtitle') }}
+        NuxtLink.landing-button.landing-button--primary(to="/survey") {{ t('landing.cta.button') }}
 </template>
 
 <script setup lang="ts">
-const { t, locale, locales, setLocale } = useI18n({ useScope: 'global' })
+interface LandingWeek {
+  step: string
+  title: string
+  topics: string[]
+}
 
-useHead({ title: () => t('meta.title') })
+interface LandingMonth {
+  id: string
+  eyebrow: string
+  title: string
+  subtitle: string
+  weeks: LandingWeek[]
+}
+
+interface LandingStat {
+  value: string
+  label: string
+}
+
+const { t, tm, rt, locale, locales, setLocale } = useI18n({ useScope: 'global' })
+
+useHead({ title: () => t('landing.meta.title') })
 
 const localeOptions = computed(() =>
   locales.value.map((item: string | { code: string; name?: string }) => {
@@ -192,20 +115,44 @@ const localeOptions = computed(() =>
   }),
 )
 
-const {
-  steps,
-  formData,
-  currentStep,
-  errorMessage,
-  successMessage,
-  isSubmitting,
-  stepTitles,
-  currentStepData,
-  isLastStep,
-  goToNextStep,
-  goToPreviousStep,
-  handleSubmit,
-} = useOnboardingForm()
+function renderMessage(value: unknown) {
+  if (typeof value === 'string') {
+    return value
+  }
+
+  return rt(value as Parameters<typeof rt>[0])
+}
+
+const stats = computed(() => {
+  const translatedStats = tm('landing.hero.stats') as Array<Record<string, unknown>>
+
+  return translatedStats.map((stat) => ({
+    value: renderMessage(stat.value),
+    label: renderMessage(stat.label),
+  })) satisfies LandingStat[]
+})
+
+const months = computed(() => {
+  const translatedMonths = tm('landing.program.months') as Array<Record<string, unknown>>
+
+  return translatedMonths.map((month) => ({
+    id: renderMessage(month.id),
+    eyebrow: renderMessage(month.eyebrow),
+    title: renderMessage(month.title),
+    subtitle: renderMessage(month.subtitle),
+    weeks: ((month.weeks as Array<Record<string, unknown>> | undefined) ?? []).map((week) => ({
+      step: renderMessage(week.step),
+      title: renderMessage(week.title),
+      topics: ((week.topics as unknown[]) ?? []).map((topic) => renderMessage(topic)),
+    })),
+  })) satisfies LandingMonth[]
+})
+
+const skills = computed(() => {
+  const translatedSkills = tm('landing.skills.items') as unknown[]
+
+  return translatedSkills.map((skill) => renderMessage(skill))
+})
 </script>
 
-<style scoped src="~/assets/css/onboarding-page.css"></style>
+<style scoped src="~/assets/css/landing-page.css"></style>

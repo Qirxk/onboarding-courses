@@ -1,8 +1,212 @@
 {
   "meta": {
     "eyebrow": "SELECTION FORM",
-    "title": "Computer Science Training",
+    "title": "Tech Mastery Program",
     "subtitle": "Answer honestly. Your responses are auto-saved at each step."
+  },
+  "surveyMeta": {
+    "eyebrow": "SELECTION FORM",
+    "title": "Tech Mastery Program",
+    "subtitle": "Answer honestly. Your responses are auto-saved at each step."
+  },
+  "landing": {
+    "meta": {
+      "title": "Tech Mastery Program | Computing and AI training"
+    },
+    "hero": {
+      "eyebrow": "Three-month intensive program",
+      "title": "Think Like a Computer Scientist",
+      "subtitle": "A progressive training program designed to build strong foundations in logic, programming, system modeling, and practical AI usage, ending with a mini project and a final Demo Day.",
+      "primaryCta": "Start the survey",
+      "secondaryCta": "Explore the program",
+      "visualEyebrow": "Journey",
+      "visualTitle": "From structured thinking to useful product building.",
+      "visualCards": {
+        "logic": "Logic and algorithms",
+        "code": "JavaScript and Ruby",
+        "ai": "AI, Copilot, and agents"
+      },
+      "stats": [
+        {
+          "value": "12",
+          "label": "Weeks of progression"
+        },
+        {
+          "value": "3",
+          "label": "Months of training"
+        },
+        {
+          "value": "1",
+          "label": "Final project to present"
+        }
+      ]
+    },
+    "program": {
+      "eyebrow": "Program overview",
+      "title": "A curriculum built as a real progression curve.",
+      "subtitle": "Each month deepens a key capability before moving to the next one: think, build, then orchestrate with AI.",
+      "months": [
+        {
+          "id": "month-1",
+          "eyebrow": "MONTH 1 — COMPUTING FOUNDATIONS",
+          "title": "Think Like a Computer Scientist",
+          "subtitle": "Build the logical habits needed to understand and solve problems clearly.",
+          "weeks": [
+            {
+              "step": "Week 1",
+              "title": "Algorithmic thinking",
+              "topics": [
+                "What an algorithm is",
+                "Problem decomposition",
+                "Instruction sequences",
+                "Exercises without a computer"
+              ]
+            },
+            {
+              "step": "Week 2",
+              "title": "Logic and conditions",
+              "topics": [
+                "Conditions (if / else)",
+                "Comparisons",
+                "Simple logic (AND / OR)",
+                "Decision making"
+              ]
+            },
+            {
+              "step": "Week 3",
+              "title": "Introduction to JavaScript",
+              "topics": [
+                "Variables",
+                "Data types",
+                "Functions",
+                "Arrays"
+              ]
+            },
+            {
+              "step": "Week 4",
+              "title": "Control structures",
+              "topics": [
+                "Loops (for, while)",
+                "Array traversal",
+                "Basic search",
+                "Basic sorting"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "month-2",
+          "eyebrow": "MONTH 2 — PROGRAMMING & OOP",
+          "title": "Build Like an Engineer",
+          "subtitle": "Move from isolated scripts to a structured way of modeling real systems.",
+          "weeks": [
+            {
+              "step": "Week 5",
+              "title": "Ruby fundamentals",
+              "topics": [
+                "Ruby syntax",
+                "Variables and methods",
+                "Conditions and loops"
+              ]
+            },
+            {
+              "step": "Week 6",
+              "title": "Object-oriented programming (OOP)",
+              "topics": [
+                "Classes",
+                "Objects",
+                "Attributes",
+                "Encapsulation"
+              ]
+            },
+            {
+              "step": "Week 7",
+              "title": "Modeling",
+              "topics": [
+                "Transform a real problem into objects",
+                "Relationships between objects",
+                "Practical cases (commerce, transport, housing)"
+              ]
+            },
+            {
+              "step": "Week 8",
+              "title": "Quality and debugging",
+              "topics": [
+                "Read and understand code",
+                "Identify errors",
+                "Fix bugs",
+                "Good practices"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "month-3",
+          "eyebrow": "MONTH 3 — AI & ORCHESTRATION",
+          "title": "Lead the AI Revolution",
+          "subtitle": "Learn how to use AI as a productivity lever and as a way to solve local problems.",
+          "weeks": [
+            {
+              "step": "Week 9",
+              "title": "Introduction to AI",
+              "topics": [
+                "What AI is",
+                "Limits and risks",
+                "Basic prompting",
+                "Understanding models"
+              ]
+            },
+            {
+              "step": "Week 10",
+              "title": "AI tools and agents",
+              "topics": [
+                "Using GitHub Copilot",
+                "Introduction to agents",
+                "Simple automation",
+                "Human + AI interaction"
+              ]
+            },
+            {
+              "step": "Week 11",
+              "title": "Business applications",
+              "topics": [
+                "Solving real problems in Cote d'Ivoire",
+                "Cases: commerce, tourism, education",
+                "Building a mini project"
+              ]
+            },
+            {
+              "step": "Week 12",
+              "title": "Final project and Demo Day",
+              "topics": [
+                "Project finalization",
+                "Presentation",
+                "Pitch",
+                "Feedback"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "eyebrow": "Skills by the end",
+      "title": "What participants will be able to do.",
+      "subtitle": "The program targets capabilities that can be reused directly in local, entrepreneurial, and professional contexts.",
+      "items": [
+        "Logical and algorithmic thinking",
+        "Programming (JavaScript + Ruby)",
+        "Modeling real-world systems",
+        "Smart use of AI",
+        "Solving local problems"
+      ]
+    },
+    "cta": {
+      "eyebrow": "Ready to apply",
+      "title": "Move to the selection survey.",
+      "subtitle": "The questionnaire evaluates motivation, logic, and commitment. Answer carefully and honestly.",
+      "button": "Go to the survey"
+    }
   },
   "language": {
     "label": "Language",
