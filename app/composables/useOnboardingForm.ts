@@ -16,6 +16,8 @@ function createInitialFormData(): FormData {
     firstWhenBroken: '',
     whatCouldStop: '',
     whyChooseYou: '',
+    howHeardAbout: '',
+    howHeardAboutDetails: '',
   }
 }
 

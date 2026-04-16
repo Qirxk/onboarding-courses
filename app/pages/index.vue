@@ -73,6 +73,25 @@ main.landing-page
             span.landing-skill__dot
             p {{ skill }}
 
+  section.landing-section.landing-section--schedule
+    .landing-shell
+      .landing-section__header
+        p.landing-section__eyebrow {{ t('landing.schedule.eyebrow') }}
+        h2.landing-section__title {{ t('landing.schedule.title') }}
+        p.landing-section__subtitle {{ t('landing.schedule.subtitle') }}
+
+      .landing-schedule
+        article.landing-schedule__card
+          p.landing-schedule__day {{ t('landing.schedule.wednesday.day') }}
+          p.landing-schedule__mode {{ t('landing.schedule.wednesday.mode') }}
+          p.landing-schedule__hours {{ t('landing.schedule.wednesday.hours') }}
+
+        article.landing-schedule__card
+          p.landing-schedule__day {{ t('landing.schedule.saturday.day') }}
+          p.landing-schedule__mode {{ t('landing.schedule.saturday.mode') }}
+          p.landing-schedule__hours {{ t('landing.schedule.saturday.hoursMorning') }}
+          p.landing-schedule__hours {{ t('landing.schedule.saturday.hoursAfternoon') }}
+
   section.landing-cta
     .landing-shell
       .landing-cta__panel

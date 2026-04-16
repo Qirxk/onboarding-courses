@@ -16,6 +16,8 @@ export interface AdminSubmission {
   first_when_broken?: string | null
   what_could_stop?: string | null
   why_choose_you?: string | null
+  how_heard_about?: string | null
+  how_heard_about_details?: string | null
   [key: string]: unknown
 }
 
@@ -24,6 +26,8 @@ export const ADMIN_DETAIL_FIELDS = [
   { key: 'email', labelKey: 'questions.email.label' },
   { key: 'actual_grade', labelKey: 'questions.actualGrade.label' },
   { key: 'phone_number', labelKey: 'questions.phoneNumber.label' },
+  { key: 'how_heard_about', labelKey: 'questions.howHeardAbout.label' },
+  { key: 'how_heard_about_details', labelKey: 'questions.howHeardAboutDetails.label' },
   { key: 'why_programming', labelKey: 'questions.whyProgramming.label' },
   { key: 'what_build', labelKey: 'questions.whatBuild.label' },
   { key: 'tech_tried', labelKey: 'questions.techTried.label' },

@@ -15,6 +15,8 @@ export interface FormData {
   firstWhenBroken: string
   whatCouldStop: string
   whyChooseYou: string
+  howHeardAbout: string
+  howHeardAboutDetails: string
 }
 
 export interface StepConfig {
@@ -37,6 +39,8 @@ export const FIELD_TO_COLUMN: Record<keyof FormData, string> = {
   firstWhenBroken: 'first_when_broken',
   whatCouldStop: 'what_could_stop',
   whyChooseYou: 'why_choose_you',
+  howHeardAbout: 'how_heard_about',
+  howHeardAboutDetails: 'how_heard_about_details',
 }
 
 export const STORAGE_PREFIX = 'cours-info-onboarding-step-'
@@ -46,7 +50,7 @@ export const ONBOARDING_STEPS: StepConfig[] = [
   { id: 'effort', fields: ['techTried', 'hoursPerWeek', 'difficultThing'] },
   { id: 'reflection', fields: ['biggestNumberMethod', 'teaSteps', 'firstWhenBroken'] },
   { id: 'engagement', fields: ['whatCouldStop', 'whyChooseYou'] },
-  { id: 'profile', fields: ['fullName', 'email', 'actualGrade', 'phoneNumber'] },
+  { id: 'profile', fields: ['fullName', 'email', 'actualGrade', 'phoneNumber', 'howHeardAbout', 'howHeardAboutDetails'] },
 ]
 
 export function buildOnboardingPayload(stepIndex: number, values: Partial<FormData>): Record<string, unknown> {

@@ -13,6 +13,16 @@
     :required="required"
   )
 
+  select.field__control(
+    v-else-if="type === 'select'"
+    :id="id"
+    v-model="model"
+    :required="required"
+  )
+    option(value="") {{ placeholder }}
+    option(v-for="opt in options" :key="opt.value" :value="opt.value")
+      | {{ opt.label }}
+
   input.field__control(
     v-else
     :id="id"
@@ -26,15 +36,21 @@
 </template>
 
 <script setup lang="ts">
+interface Option {
+  value: string
+  label: string
+}
+
 interface Props {
   id: string
   label: string
   placeholder?: string
-  type?: 'text' | 'number' | 'url' | 'email' | 'tel' | 'password' | 'textarea'
+  type?: 'text' | 'number' | 'url' | 'email' | 'tel' | 'password' | 'textarea' | 'select'
   required?: boolean
   rows?: number
   min?: number
   max?: number
+  options?: Option[]
 }
 
 withDefaults(defineProps<Props>(), {
@@ -44,6 +60,7 @@ withDefaults(defineProps<Props>(), {
   rows: 4,
   min: undefined,
   max: undefined,
+  options: () => [],
 })
 
 // Accept string | number so that <input type="number"> doesn't trigger a prop

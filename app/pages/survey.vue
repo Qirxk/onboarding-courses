@@ -67,6 +67,24 @@ main.page
           :required="true"
           :rows="1"
         )
+        OnboardingFormField(
+          id="howHeardAbout"
+          v-model="formData.howHeardAbout"
+          type="select"
+          :label="t('questions.howHeardAbout.label')"
+          :placeholder="t('questions.howHeardAbout.placeholder')"
+          :required="true"
+          :options="howHeardAboutOptions"
+        )
+        OnboardingFormField(
+          v-if="formData.howHeardAbout"
+          id="howHeardAboutDetails"
+          v-model="formData.howHeardAboutDetails"
+          :label="t('questions.howHeardAboutDetails.label')"
+          :placeholder="t('questions.howHeardAboutDetails.placeholder')"
+          :required="true"
+          :rows="2"
+        )
 
       template(v-else-if="currentStepData.id === 'motivation'")
         OnboardingFormField(
@@ -182,7 +200,7 @@ main.page
 <script setup lang="ts">
 import shelterLogo from '~/assets/logo/logo-shelter.png'
 
-const { t, locale, locales, setLocale } = useI18n({ useScope: 'global' })
+const { t, tm, rt, locale, locales, setLocale } = useI18n({ useScope: 'global' })
 
 useHead({ title: () => t('surveyMeta.title') })
 
@@ -195,6 +213,14 @@ const localeOptions = computed(() =>
     return { code: item.code, name: item.name || item.code.toUpperCase() }
   }),
 )
+
+const howHeardAboutOptions = computed(() => {
+  const rawOptions = tm('selectOptions.howHeardAbout') as Array<{ value: string; label: string }>
+  return rawOptions.map(opt => ({
+    value: opt.value,
+    label: typeof opt.label === 'string' ? opt.label : rt(opt.label),
+  }))
+})
 
 const {
   steps,

@@ -201,6 +201,22 @@
         "Resolution de problemes locaux"
       ]
     },
+    "schedule": {
+      "eyebrow": "Horaires de la formation",
+      "title": "Un rythme hebdomadaire pense pour la regularite.",
+      "subtitle": "La formation se deroule chaque semaine avec une session en ligne et une session en presentiel.",
+      "wednesday": {
+        "day": "Mercredi",
+        "mode": "En ligne",
+        "hours": "18h - 21h"
+      },
+      "saturday": {
+        "day": "Samedi",
+        "mode": "Presentiel",
+        "hoursMorning": "10h - 12h",
+        "hoursAfternoon": "14h - 16h"
+      }
+    },
     "cta": {
       "eyebrow": "Pret a postuler",
       "title": "Passe au questionnaire de selection.",
@@ -227,6 +243,26 @@
     "next": "Continuer",
     "submit": "Envoyer ma candidature",
     "submitting": "Envoi en cours..."
+  },
+  "selectOptions": {
+    "howHeardAbout": [
+      {
+        "value": "social_network",
+        "label": "Reseau social"
+      },
+      {
+        "value": "referral",
+        "label": "Par quelqu'un"
+      },
+      {
+        "value": "search_engine",
+        "label": "Moteur de recherche"
+      },
+      {
+        "value": "other",
+        "label": "Autre"
+      }
+    ]
   },
   "feedback": {
     "success": "Candidature envoyee avec succes. Merci!",
@@ -326,6 +362,14 @@
     "whyChooseYou": {
       "label": "10. Pourquoi devrions-nous te choisir toi parmi les autres ?",
       "placeholder": "Mets en avant ta motivation et ton engagement..."
+    },
+    "howHeardAbout": {
+      "label": "11. Comment as-tu entendu parler de la Tech Mastery Program ?",
+      "placeholder": "Sélectionne une option..."
+    },
+    "howHeardAboutDetails": {
+      "label": "Donne-nous plus de détails",
+      "placeholder": "Précise le réseau social ou le nom de la personne qui t'en a parlé..."
     }
   }
 }
