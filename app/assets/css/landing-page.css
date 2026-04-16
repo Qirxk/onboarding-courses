@@ -34,7 +34,7 @@
 .landing-topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 0.8rem;
   margin-bottom: 2rem;
 }

@@ -13,6 +13,24 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
 }
 
+async function sendSlackSurveyMessage(webhookUrl: string, submission: { full_name: string | null; email: string | null; phone_number: string | null }) {
+  const fullName = submission.full_name?.trim() || '-'
+  const email = submission.email?.trim() || '-'
+  const phoneNumber = submission.phone_number?.trim() || '-'
+
+  await $fetch(webhookUrl, {
+    method: 'POST',
+    body: {
+      text: [
+        'New survey submission',
+        `Full name: ${fullName}`,
+        `Email: ${email}`,
+        `Phone: ${phoneNumber}`,
+      ].join('\n'),
+    },
+  })
+}
+
 export default defineEventHandler(async (event) => {
   const body = await readBody<SaveSubmissionBody>(event)
   const rawStepIndex = body.stepIndex
@@ -42,8 +60,11 @@ export default defineEventHandler(async (event) => {
   }
 
   const session = await useOnboardingSession(event)
+  const config = useRuntimeConfig(event)
+  const slackWebhookUrl = typeof config.slackWebhookUrl === 'string' ? config.slackWebhookUrl.trim() : ''
   const supabase = getSupabaseAdminClient(event)
   const submissionId = session.data.submissionId
+  let currentSubmissionId = submissionId ?? null
 
   if (!submissionId) {
     const { data, error } = await supabase
@@ -59,8 +80,11 @@ export default defineEventHandler(async (event) => {
       })
     }
 
+    const insertedSubmissionId = data?.id !== undefined && data?.id !== null ? String(data.id) : null
+    currentSubmissionId = insertedSubmissionId
+
     await session.update({
-      submissionId: data?.id !== undefined && data?.id !== null ? String(data.id) : null,
+      submissionId: insertedSubmissionId,
     })
   } else {
     const { error } = await supabase
@@ -77,6 +101,24 @@ export default defineEventHandler(async (event) => {
   }
 
   if (body.complete) {
+    if (slackWebhookUrl && currentSubmissionId) {
+      try {
+        const { data, error } = await supabase
+          .from('cours-infos')
+          .select('full_name, email, phone_number')
+          .eq('id', currentSubmissionId)
+          .maybeSingle()
+
+        if (error) {
+          console.error('Slack notification skipped: unable to load submission', error.message)
+        } else if (data) {
+          await sendSlackSurveyMessage(slackWebhookUrl, data)
+        }
+      } catch (notificationError) {
+        console.error('Slack notification failed', notificationError)
+      }
+    }
+
     await session.clear()
   }
 

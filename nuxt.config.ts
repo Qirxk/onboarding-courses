@@ -5,10 +5,21 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n'],
+  modules: [
+    '@nuxtjs/i18n',
+    ['@posthog/nuxt', {
+      publicKey: process.env.NUXT_PUBLIC_POSTHOG_KEY || '',
+      host: process.env.NUXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com',
+      clientConfig: {
+        autocapture: true,
+        capture_pageview: true,
+      },
+    }],
+  ],
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     adminSessionPassword: process.env.NUXT_ADMIN_SESSION_PASSWORD || '',
+    slackWebhookUrl: process.env.NUXT_SLACK_WEBHOOK_URL || process.env.SLACK_WEBHOOK_URL || '',
     supabaseServiceRoleKey: process.env.NUXT_SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY || '',
     public: {
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL || process.env.NUXT_SUPABASE_URL || '',

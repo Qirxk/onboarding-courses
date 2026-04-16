@@ -1,9 +1,9 @@
 <template lang="pug">
 main.page
   section.hero
-    .hero__top
-      .hero__brand
-        img.hero__brand-logo(:src="shelterLogo" alt="Tech Shelter")
+    nuxt-link.hero__brand(to="/")
+      img.hero__brand-logo(:src="shelterLogo" alt="Tech Shelter")
+    .hero__top.mt-5
       .hero__copy
         p.hero__eyebrow {{ t('surveyMeta.eyebrow') }}
         h1.hero__title {{ t('surveyMeta.title') }}
