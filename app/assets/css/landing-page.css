@@ -414,9 +414,58 @@
   padding-top: 1.4rem;
 }
 
+.landing-schedule__start-card {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  padding: 1.15rem 1.2rem 1.15rem 4.5rem;
+  border: 1px solid rgba(103, 83, 255, 0.2);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(103, 83, 255, 0.18) 0, transparent 24%),
+    linear-gradient(135deg, rgba(239, 68, 35, 0.1) 0%, rgba(103, 83, 255, 0.12) 100%),
+    rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 50px rgba(39, 23, 13, 0.1);
+  overflow: hidden;
+}
+
+.landing-schedule__start-card::before {
+  content: '';
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--landing-primary), var(--landing-violet));
+  box-shadow: 0 0 0 10px rgba(103, 83, 255, 0.08);
+  transform: translateY(-50%);
+}
+
+.landing-schedule__start-label,
+.landing-schedule__start {
+  margin: 0;
+}
+
+.landing-schedule__start-label {
+  color: var(--landing-violet);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .landing-schedule {
   display: grid;
   gap: 1rem;
+}
+
+.landing-schedule__start {
+  color: var(--landing-ink);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.3;
 }
 
 .landing-schedule__card {
@@ -492,6 +541,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .landing-schedule__start-card {
+    max-width: 540px;
+  }
+
   .landing-month {
     padding: 1.35rem;
   }
@@ -559,6 +612,22 @@
   .landing-actions,
   .landing-topbar__actions {
     gap: 0.55rem;
+  }
+
+  .landing-schedule__start-card {
+    padding: 1rem 1rem 1rem 3.9rem;
+    border-radius: 20px;
+  }
+
+  .landing-schedule__start-card::before {
+    left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 0 0 8px rgba(103, 83, 255, 0.08);
+  }
+
+  .landing-schedule__start {
+    font-size: 1rem;
   }
 
   .landing-button {

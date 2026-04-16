@@ -80,6 +80,10 @@ main.landing-page
         h2.landing-section__title {{ t('landing.schedule.title') }}
         p.landing-section__subtitle {{ t('landing.schedule.subtitle') }}
 
+      .landing-schedule__start-card
+        p.landing-schedule__start-label Start
+        p.landing-schedule__start {{ t('landing.schedule.startDate') }}
+
       .landing-schedule
         article.landing-schedule__card
           p.landing-schedule__day {{ t('landing.schedule.wednesday.day') }}
